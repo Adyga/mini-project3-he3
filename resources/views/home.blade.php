@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <p>Mini-Project3</p>
                 </div>
             </div>
         </div>
