@@ -60,6 +60,11 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    @if (Auth::user()->profile)
+                                        <a class="dropdown-item" href="{{ route('profile.show', ['user_id'=>Auth::user()->id,'profile_id'=>Auth::user()->profile->id]) }}">My Profile</a>
+                                    @else
+                                        <a class="dropdown-item" href=" {{ route ('profile.create', ['user_id' => Auth::user()->id]) }}">Create Profile</a>
+                                    @endif
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
