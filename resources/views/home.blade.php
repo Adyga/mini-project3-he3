@@ -20,8 +20,7 @@
                                         <div class="card-header">
                                             <small class="text-muted">
                                                 Updated: {{ $question->created_at->diffForHumans() }} - has :
-
-                                                <p>wala</p>
+                                                {{ $question->answers()->count() }} Answers.
 
                                             </small>
                                         </div>
@@ -43,7 +42,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="float-right">
-
+                            {{$questions->links() }}
                         </div>
                     </div>
                 </div>
