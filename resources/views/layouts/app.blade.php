@@ -33,7 +33,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <ul class="navbar-nav mr-auto">
+                            <li><a class="nav-link" href="{{ route ('home') }}"> {{__('Questions') }}</a></li>
+                        </ul>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

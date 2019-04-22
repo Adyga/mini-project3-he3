@@ -25,3 +25,7 @@ Route::get('/user/{user_id}/profile/{profile_id}/edit', 'ProfileController@edit'
 Route::post('/user/{user_id}/profile/', 'ProfileController@store')->name('profile.store');
 Route::patch('/user/{user_id}/profile/{profile_id}', 'ProfileController@update')->name('profile.update');
 Route::delete('/user/{user_id}/profile/{profile_id}', 'ProfileController@destroy')->name('profile.destroy');
+
+Route::resources([
+    'questions' => 'QuestionController',
+]);
