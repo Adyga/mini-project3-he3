@@ -108,9 +108,7 @@ class QuestionController extends Controller
     public function showComment($question_id)
     {
         $question = Question::where('question_id', $question_id)->firstOrFail();
-
         $comments = $question->comments;
-
         return view('questions.show', compact('question', 'comments'));
     }
 }
