@@ -30,4 +30,12 @@ class HomeController extends Controller
         return view('home')->with('questions', $questions);
 
     }
+    public function show()
+    {
+        return view('/main');
+//        $user = Auth::user();
+//        $questions = $user->questions()->paginate(3);
+//        return view('home')->with('questions', $questions);
+
+    }
 }

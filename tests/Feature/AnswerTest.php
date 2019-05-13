@@ -5,6 +5,8 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Answer;
+use App\Question;
 
 class AnswerTest extends TestCase
 {
@@ -18,5 +20,6 @@ class AnswerTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
+
     }
 }

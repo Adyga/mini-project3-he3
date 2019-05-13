@@ -36,6 +36,12 @@
                         <ul class="navbar-nav mr-auto">
                             <li><a class="nav-link" href="{{ route ('home') }}"> {{__('Questions') }}</a></li>
                         </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('blog') }}">{{ __('blog') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/new_library">{{ __('library') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -81,6 +87,7 @@
 
         <main class="py-4">
             @yield('content')
+
         </main>
     </div>
 </body>
