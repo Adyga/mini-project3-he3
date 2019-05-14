@@ -15,5 +15,4 @@ class CategoryTableSeeder extends Seeder
         factory(App\Category::class, 1)->create()->each(function ($category) {
         });
     }
-
 }
