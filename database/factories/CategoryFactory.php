@@ -5,7 +5,7 @@
 use App\Category;
 use Faker\Generator as Faker;
 
-$factory->define(Category::class, function (Faker $faker) {
+$factory->define(App\Category::class, function (Faker $faker) {
     return [
         'name'=>$faker->name,
     ];
