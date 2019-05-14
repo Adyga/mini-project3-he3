@@ -24,7 +24,6 @@
 
                         <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                             <label for="title" class="col-md-4 control-label">Title</label>
-
                             <div class="col-md-6">
                                 <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}">
 
@@ -35,7 +34,6 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
                             <label for="category" class="col-md-4 control-label">Category</label>
 
@@ -46,7 +44,6 @@
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                                 </select>
-
                                 @if ($errors->has('category'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('category') }}</strong>
@@ -54,10 +51,8 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group{{ $errors->has('priority') ? ' has-error' : '' }}">
                             <label for="priority" class="col-md-4 control-label">Priority</label>
-
                             <div class="col-md-6">
                                 <select id="priority" type="" class="form-control" name="priority">
                                     <option value="">Select Priority</option>
@@ -65,7 +60,6 @@
                                     <option value="medium">Medium</option>
                                     <option value="high">High</option>
                                 </select>
-
                                 @if ($errors->has('priority'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('priority') }}</strong>
@@ -73,13 +67,10 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group{{ $errors->has('message') ? ' has-error' : '' }}">
                             <label for="message" class="col-md-4 control-label">Message</label>
-
                             <div class="col-md-6">
                                 <textarea rows="10" id="message" class="form-control" name="message"></textarea>
-
                                 @if ($errors->has('message'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('message') }}</strong>
@@ -87,14 +78,12 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-library"></i> Open Library
                                 </button>
                             </div>
-
                         </div>
                     </form>
                 </div>
