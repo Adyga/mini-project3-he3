@@ -12,8 +12,15 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Category::class, 5)->create()->each(function ($category) {
-         });
+        DB::table('categories')->insert([
+            'name' => 'Science',
+         ]);
+        DB::table('categories')->insert([
+            'name' => 'Fine Art',
+        ]);
+        DB::table('categories')->insert([
+            'name' => 'History',
+        ]);
     }
 
 }
