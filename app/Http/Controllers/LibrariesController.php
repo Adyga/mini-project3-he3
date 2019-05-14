@@ -67,4 +67,5 @@ class LibrariesController extends Controller
 
         return view('library.show', compact('library', 'category'));
     }
+
 }
