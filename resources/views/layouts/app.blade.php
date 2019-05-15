@@ -42,6 +42,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/new_library">{{ __('library') }}</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/categories/create">{{ __('category') }}</a>
+                        </li>
+
+
+
                     </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

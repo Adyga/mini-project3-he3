@@ -60,3 +60,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::post('close_library/{library_id}', 'LibrariesController@close');
 });
 
+//Route::resources([
+//    'categories' => 'CategoryController',
+//]);
+
+
+Route::get('/categories/create', 'CategoryController@create')->name('library/addcategory');
+Route::post('/categories/create', 'CategoryController@store');
