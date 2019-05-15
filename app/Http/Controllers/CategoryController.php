@@ -13,4 +13,5 @@ class CategoryController extends Controller
     {
         return $this->hasMany(Library::class);
     }
+
 }

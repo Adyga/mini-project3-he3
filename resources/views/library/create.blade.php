@@ -38,21 +38,18 @@
                         <div class="form-group{{ $errors->has('category') ? ' has-error' : '' }}">
                             <label for="category" class="col-md-4 control-label">Category</label>
 
-                            <div class="form-group{{ $errors->has('priority') ? ' has-error' : '' }}">
-                                <label for="priority" class="col-md-4 control-label">Priority</label>
-                                <div class="col-md-6">
-                                    <select id="priority" type="" class="form-control" name="priority">
-                                        <option value="">Select Priority</option>
-                                        <option value="science">Science</option>
-                                        <option value="history">History</option>
-                                        <option value="fine arth">Fine Art</option>
-                                    </select>
-                                    @if ($errors->has('priority'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('priority') }}</strong>
+                            <div class="col-md-6">
+                                <select id="category" type="category" class="form-control" name="category">
+                                    <option value="">Select Category</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                </select>
+                                @if ($errors->has('category'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('category') }}</strong>
                                     </span>
-                                    @endif
-                                </div>
+                                @endif
                             </div>
                         </div>
                         <div class="form-group{{ $errors->has('priority') ? ' has-error' : '' }}">
