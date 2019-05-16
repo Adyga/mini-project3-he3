@@ -35,7 +35,7 @@ class LibrariesController extends Controller
         $library = new Library([
             'title'     => $request->input('title'),
             'user_id'   => Auth::user()->id,
-            'library_id' => strtoupper(10),
+            'library_id' => strtoupper(str_random(10)),
             'category_id'  => $request->input('category'),
             'priority'  => $request->input('priority'),
             'message'   => $request->input('message'),
@@ -44,7 +44,7 @@ class LibrariesController extends Controller
 
         $library->save();
 
-
+        $mailer->sendLibraryInformation(Auth::user(), $library);
 
         return redirect()->back()->with("status", "A library order with ID: #$library->library_id has been opened.");
     }
