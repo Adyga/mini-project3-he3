@@ -21,7 +21,7 @@ class CreateLibrariesTable extends Migration
 
             $table->string('library_type')->nullable();
             $table->string('library_id');
-            $table->index(['library_type', 'library_id']);
+            $table->index(['library_type', 'library_id'])->unique();
 
             $table->string('title');
             $table->string('priority');
