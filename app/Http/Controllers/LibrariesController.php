@@ -44,7 +44,7 @@ class LibrariesController extends Controller
 
         $library->save();
 
-        $mailer->sendLibraryInformation(Auth::user(), $library);
+        
 
         return redirect()->back()->with("status", "A library order with ID: #$library->library_id has been opened.");
     }
