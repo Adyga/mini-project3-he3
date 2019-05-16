@@ -35,7 +35,7 @@ class LibrariesController extends Controller
         $library = new Library([
             'title'     => $request->input('title'),
             'user_id'   => Auth::user()->id,
-            'library_id' => strtoupper(str_random(10)),
+            'library_id' => strtoupper(random_int(5,55555555)),
             'category_id'  => $request->input('category'),
             'priority'  => $request->input('priority'),
             'message'   => $request->input('message'),
