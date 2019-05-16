@@ -17,7 +17,7 @@ class CreateLibrariesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
-            $table->integer('library_id');
+            $table->string('library_id')->nullable();
 
 //            $table->string('library_type')->nullable();
 //            $table->string('library_id');
